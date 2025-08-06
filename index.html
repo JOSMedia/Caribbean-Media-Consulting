@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOS PRODUCTIONS - Caribbean Business Intelligence</title>
+    <title>Caribbean Media Consulting - JOS Productions</title>
     <style>
         * {
             margin: 0;
@@ -12,10 +12,10 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(90deg, #0cc0df, #ffde59);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
 
@@ -25,411 +25,280 @@
             padding: 2rem;
         }
 
-        .hero {
+        header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
+            padding: 2rem;
             border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
             margin-bottom: 3rem;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            text-align: center;
         }
 
         .logo {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-headline {
             font-size: 2.5rem;
             font-weight: bold;
-            margin-bottom: 1rem;
-            color: #333;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .hero-subtext {
+        .tagline {
+            color: #667eea;
             font-size: 1.3rem;
-            color: #666;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            font-weight: 500;
         }
 
-        .stats {
+        .main-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #667eea;
-            display: block;
-        }
-
-        .stat-text {
-            font-size: 1rem;
-            color: #666;
-            margin-top: 0.5rem;
-        }
-
-        .two-column {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            margin-top: 3rem;
+            align-items: start;
         }
 
-        .content-section {
+        .hero-section {
             background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .section-title {
-            font-size: 2rem;
-            font-weight: bold;
+        .hero-section h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            color: #333;
+            font-weight: 700;
         }
 
-        .service-list {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .service-list li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
+        .hero-section p {
+            color: #666;
             font-size: 1.1rem;
-            position: relative;
-            padding-left: 2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
         }
 
-        .service-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
+        .services {
+            margin-bottom: 2rem;
+        }
+
+        .services h3 {
             color: #667eea;
-            font-weight: bold;
-            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
-        .form-section {
+        .services ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .services li {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 25px;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+            transform: translateX(0);
+            transition: all 0.3s ease;
+        }
+
+        .services li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);
+        }
+
+        .consultation-form {
             background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .consultation-form h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            text-align: center;
         }
 
         .form-group {
             margin-bottom: 1.5rem;
         }
 
-        .form-group label {
+        label {
             display: block;
             margin-bottom: 0.5rem;
-            font-weight: 600;
             color: #333;
+            font-weight: 600;
         }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        input, select, textarea {
             width: 100%;
             padding: 1rem;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #e1e8ed;
             border-radius: 10px;
             font-size: 1rem;
             transition: all 0.3s ease;
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: #667eea;
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            background: white;
         }
 
-        .cta-button {
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
             width: 100%;
-            padding: 1.2rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            padding: 1.2rem;
             border: none;
             border-radius: 10px;
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
         }
 
-        .testimonial {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-            border-left: 4px solid #667eea;
-            font-style: italic;
+        .hidden {
+            display: none;
         }
 
-        .app-preview {
+        .contact-info {
             background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
             border-radius: 20px;
-            padding: 2.5rem;
             margin-top: 3rem;
             text-align: center;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .app-preview h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .coming-soon {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            display: inline-block;
+        .contact-info h3 {
+            color: #2c3e50;
             margin-bottom: 1rem;
         }
 
-        .success-message {
-            display: none;
-            background: #d4edda;
-            color: #155724;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-top: 1rem;
-            text-align: center;
+        .contact-info p {
+            color: #666;
+            margin-bottom: 0.5rem;
         }
 
-        .network-link {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 10px;
-            padding: 1rem;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .network-link a {
+        .contact-info strong {
             color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .network-link a:hover {
-            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            .two-column {
+            .main-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
-            .hero-headline {
-                font-size: 2rem;
-            }
-            
-            .hero-subtext {
-                font-size: 1.1rem;
+
+            .hero-section, .consultation-form {
+                padding: 2rem;
             }
 
-            .stats {
-                grid-template-columns: 1fr;
+            .hero-section h1 {
+                font-size: 1.8rem;
             }
-            
-            .container {
-                padding: 1rem;
+
+            .logo {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="hero">
-            <div class="logo">JOS PRODUCTIONS</div>
-            <h1 class="hero-headline">Caribbean Media Strategy Consulting</h1>
-            <p class="hero-subtext">Helping brands tell authentic Caribbean stories and connect with Caribbean markets. Get strategic media consulting while I build the ultimate Caribbean content platform.</p>
-        </div>
+        <header>
+            <div class="logo">JOS Productions</div>
+            <div class="tagline">Caribbean Media Consulting Excellence</div>
+        </header>
 
-        <div class="stats">
-            <div class="stat">
-                <span class="stat-number">10+</span>
-                <div class="stat-text">Years studying Caribbean media landscape</div>
-            </div>
-            <div class="stat">
-                <span class="stat-number">15+</span>
-                <div class="stat-text">Caribbean markets analyzed for authentic storytelling</div>
-            </div>
-            <div class="stat">
-                <span class="stat-number">100%</span>
-                <div class="stat-text">Focus on authentic Caribbean narratives</div>
-            </div>
-        </div>
-
-        <div class="two-column">
-            <div class="content-section">
-                <h2 class="section-title">Media Strategy Consulting</h2>
-                <p>Specializing in authentic Caribbean storytelling and market connection strategies. I help brands navigate Caribbean markets and tell genuine Caribbean stories.</p>
-
-                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Services Offered</h3>
-                <ul class="service-list">
-                    <li>Caribbean market research and audience insights</li>
-                    <li>Authentic Caribbean brand storytelling development</li>
-                    <li>Caribbean diaspora audience engagement strategies</li>
-                    <li>Cultural sensitivity review for Caribbean campaigns</li>
-                    <li>Caribbean media landscape navigation</li>
-                    <li>Content strategy for Caribbean market entry</li>
-                </ul>
-
-                <div class="testimonial">
-                    "Understanding Caribbean markets requires cultural insight, not just data. This approach helps brands connect authentically without appropriation."
-                </div>
-
-                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">My Approach</h3>
-                <p>Every Caribbean market is unique. I focus on understanding your specific goals and the particular Caribbean audiences you want to reach, then develop strategies that respect culture while achieving business objectives.</p>
-
-                <p style="margin-top: 1rem;"><strong>Available for:</strong> Strategy sessions, market research, content review, ongoing consulting partnerships, and in-person consulting engagements.</p>
-
-                <div class="network-link">
-                    <p><strong>Explore authentic Caribbean content:</strong></p>
-                    <a href="https://islandviewnetwork.com" target="_blank">Visit Island View Network →</a>
-                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">See our Caribbean storytelling in action</p>
-                </div>
-            </div>
-
-            <div class="form-section">
-                <h3 style="margin-bottom: 1.5rem;">Request Consultation Access</h3>
+        <div class="main-content">
+            <section class="hero-section">
+                <h1>Transform Your Caribbean Business with Strategic Media Solutions</h1>
+                <p>We specialize in helping Caribbean businesses amplify their voice, expand their reach, and achieve sustainable growth through innovative media strategies and digital marketing solutions.</p>
                 
-                <form id="consultingForm" netlify name="consultation-request">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" required placeholder="your@email.com">
+                <div class="services">
+                    <h3>Our Expertise</h3>
+                    <ul>
+                        <li>🎯 Digital Marketing Strategy</li>
+                        <li>📱 Social Media Management</li>
+                        <li>🎥 Content Creation & Production</li>
+                        <li>📊 Brand Development</li>
+                        <li>🌐 Website & E-commerce Solutions</li>
+                        <li>📈 Analytics & Performance Tracking</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="consultation-form">
+                <h2>Get Your Free Strategy Consultation</h2>
+                <form action="/thank-you.html" method="POST" netlify-honeypot="bot-field" data-netlify="true" name="consultation-request">
+                    <div class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                     </div>
                     
                     <div class="form-group">
-                        <label for="company">Company/Organization</label>
-                        <input type="text" name="company" id="company" placeholder="Your company name">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="challenge">Primary Business Challenge</label>
+                        <label for="company">Company/Organization *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="challenge">Primary Business Challenge *</label>
                         <select id="challenge" name="challenge" required>
                             <option value="">Select your main challenge</option>
-                            <option value="market-entry">Caribbean market entry</option>
-                            <option value="brand-positioning">Authentic brand positioning</option>
-                            <option value="media-strategy">Media strategy development</option>
-                            <option value="competitive-intelligence">Business intelligence needs</option>
-                            <option value="crisis-management">Crisis-proof business models</option>
-                            <option value="other">Other - will specify</option>
+                            <option value="brand-awareness">Increasing Brand Awareness</option>
+                            <option value="lead-generation">Lead Generation & Sales</option>
+                            <option value="social-media">Social Media Presence</option>
+                            <option value="content-strategy">Content Strategy</option>
+                            <option value="website-performance">Website & Online Performance</option>
+                            <option value="market-expansion">Market Expansion</option>
+                            <option value="competitor-analysis">Competitive Analysis</option>
+                            <option value="media-strategy">Overall Media Strategy</option>
+                            <option value="other">Other (please specify in message)</option>
                         </select>
                     </div>
-                    
-                    <button type="submit" class="cta-button">Request Consultation Access</button>
+
+                    <div class="form-group">
+                        <label for="message">Tell us more about your goals (Optional)</label>
+                        <textarea id="message" name="message" placeholder="Share any specific goals, challenges, or questions you'd like us to address..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Get My Free Consultation</button>
                 </form>
-
-                <div class="success-message" id="successMessage">
-                    ✅ Request submitted! You'll receive exclusive Caribbean business intelligence and consultation details within 24 hours.
-                </div>
-
-                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    Consultation rates discussed during initial call
-                </p>
-            </div>
+            </section>
         </div>
 
-        <div class="app-preview">
-            <div class="coming-soon">Coming Soon</div>
-            <h3>Caribbean Content Platform</h3>
-            <p>Building a comprehensive platform for Caribbean stories, insights, and cultural content. Join the waitlist to get early access when we launch.</p>
-            
-            <div style="margin-top: 2rem;">
-                <strong style="color: #667eea;">Early Consulting Clients Get:</strong><br>
-                ✓ Platform beta access when available<br>
-                ✓ Exclusive content and insights<br>
-                ✓ Early adopter benefits<br>
-                ✓ Continued partnership opportunities
-            </div>
+        <div class="contact-info">
+            <h3>Ready to Transform Your Business?</h3>
+            <p><strong>Email:</strong> media@josproductions.com</p>
+            <p><strong>Response Time:</strong> Within 24 hours</p>
+            <p>We're committed to helping Caribbean businesses thrive in the digital landscape</p>
         </div>
-
-        <footer style="text-align: center; margin-top: 3rem; padding: 2rem; color: #666;">
-            <p>&copy; 2025 JOS Productions. All rights reserved.</p>
-            <p style="margin-top: 0.5rem;">
-                <a href="mailto:media@josproductions.com" style="color: #667eea; text-decoration: none;">media@josproductions.com</a>
-            </p>
-        </footer>
     </div>
-
-    <script>
-        document.getElementById('consultingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Submit the form data to Netlify
-            const formData = new FormData(this);
-            
-            fetch('/', {
-                method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString()
-            })
-            .then(() => {
-                document.getElementById('successMessage').style.display = 'block';
-                this.reset();
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('There was an error submitting your request. Please try again or email us directly.');
-            });
-        });
-    </script>
 </body>
 </html>
