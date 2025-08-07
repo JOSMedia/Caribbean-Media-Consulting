@@ -329,14 +329,14 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
+            padding: 1.5rem;
+            margin-top: 3rem;
             text-align: center;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .footer-content {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
@@ -344,14 +344,15 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .footer-links a {
             color: #667eea;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: color 0.3s ease;
         }
 
@@ -360,55 +361,34 @@
         }
 
         .footer-contact {
-            margin-bottom: 2rem;
-        }
-
-        .footer-contact h4 {
-            color: #333;
             margin-bottom: 1rem;
-            font-size: 1.2rem;
         }
 
         .footer-contact p {
             color: #666;
-            margin: 0.5rem 0;
-        }
-
-        .footer-social {
-            margin-bottom: 2rem;
-        }
-
-        .footer-social a {
-            display: inline-block;
-            margin: 0 1rem;
-            color: #667eea;
-            font-size: 1.5rem;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            transform: translateY(-3px);
-            color: #764ba2;
+            margin: 0.3rem 0;
+            font-size: 0.9rem;
         }
 
         .footer-bottom {
             border-top: 1px solid #eee;
-            padding-top: 2rem;
+            padding-top: 1rem;
             color: #666;
         }
 
         .footer-bottom p {
-            margin: 0.5rem 0;
+            margin: 0.3rem 0;
+            font-size: 0.85rem;
         }
 
         .footer-logo {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
             background: linear-gradient(135deg, #667eea, #764ba2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         @media (max-width: 768px) {
@@ -451,7 +431,7 @@
                 <h2 class="section-title">Media Strategy Consulting</h2>
                 <p>Specializing in authentic Caribbean storytelling and market connection strategies. I help brands navigate Caribbean markets and tell genuine Caribbean stories.</p>
 
-                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Services Offered</h3>
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;" id="services">Services Offered</h3>
                 <ul class="service-list">
                     <li>Caribbean market research and audience insights</li>
                     <li>Authentic Caribbean brand storytelling development</li>
@@ -469,6 +449,17 @@
                 <p>Every Caribbean market is unique. I focus on understanding your specific goals and the particular Caribbean audiences you want to reach, then develop strategies that respect culture while achieving business objectives.</p>
 
                 <p style="margin-top: 1rem;"><strong>Available for:</strong> Strategy sessions, market research, content review, ongoing consulting partnerships, and in-person consulting engagements.</p>
+
+                <!-- About Section -->
+                <div id="about" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0f0f0;">
+                    <h3 style="margin-bottom: 1rem; color: #333;">About JOS Productions</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: #555;">
+                        <strong>JOS Productions</strong> is a premier media consulting company dedicated to elevating Caribbean voices by showcasing the region's vibrant culture and talent to global audiences. Through authentic storytelling and strategic market insights, we create meaningful connections that resonate with audiences worldwide while respecting and celebrating Caribbean heritage.
+                    </p>
+                    <p style="margin-top: 1rem; color: #666;">
+                        Our mission is to bridge the gap between Caribbean authenticity and global market success, ensuring brands tell genuine stories that honor the rich cultural tapestry of the Caribbean islands.
+                    </p>
+                </div>
             </div>
 
             <div class="form-section">
@@ -554,24 +545,12 @@
                 </div>
 
                 <div class="footer-contact">
-                    <h4>Get in Touch</h4>
-                    <p>📧 <a href="mailto:media@josproductions.com" style="color: #667eea;">media@josproductions.com</a></p>
-                    <p>🌐 Caribbean Media Strategy & Market Entry Consulting</p>
-                    <p>📅 <a href="https://josproductions.setmore.com/jos" target="_blank" style="color: #667eea;">Schedule Your Free 15-Minute Consultation</a></p>
-                </div>
-
-                <div class="footer-social">
-                    <!-- Add your social media links here when available -->
-                    <a href="mailto:media@josproductions.com" title="Email">📧</a>
-                    <a href="https://josproductions.setmore.com/jos" target="_blank" title="Book Consultation">📅</a>
+                    <p>📧 <a href="mailto:media@josproductions.com" style="color: #667eea;">media@josproductions.com</a> | 📅 <a href="https://josproductions.setmore.com/jos" target="_blank" style="color: #667eea;">Free 15-Min Consultation</a></p>
                 </div>
 
                 <div class="footer-bottom">
                     <p><strong>© 2025 JOS Productions. All rights reserved.</strong></p>
-                    <p>Specializing in authentic Caribbean storytelling and market entry strategies</p>
-                    <p style="font-size: 0.9rem; margin-top: 1rem;">
-                        <em>Helping brands connect with Caribbean markets through cultural insight and strategic expertise</em>
-                    </p>
+                    <p>Caribbean Media Strategy & Market Entry Consulting</p>
                 </div>
             </div>
         </footer>
