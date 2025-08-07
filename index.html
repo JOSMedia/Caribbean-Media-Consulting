@@ -205,6 +205,30 @@
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
 
+        .setmore-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .setmore-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
         .testimonial {
             background: #f8f9fa;
             padding: 1.5rem;
@@ -254,6 +278,30 @@
             display: none;
         }
 
+        .or-divider {
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .or-divider span {
+            background: white;
+            padding: 0 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .or-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #ddd;
+            z-index: -1;
+        }
+
         @media (max-width: 768px) {
             .two-column {
                 grid-template-columns: 1fr;
@@ -274,6 +322,103 @@
             
             .container {
                 padding: 1rem;
+            }
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #764ba2;
+        }
+
+        .footer-contact {
+            margin-bottom: 2rem;
+        }
+
+        .footer-contact h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-contact p {
+            color: #666;
+            margin: 0.5rem 0;
+        }
+
+        .footer-social {
+            margin-bottom: 2rem;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            margin: 0 1rem;
+            color: #667eea;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            transform: translateY(-3px);
+            color: #764ba2;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #eee;
+            padding-top: 2rem;
+            color: #666;
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer {
+                padding: 2rem 1rem;
             }
         }
     </style>
@@ -360,6 +505,18 @@
                     <button type="submit" class="cta-button">Request Consultation Access</button>
                 </form>
 
+                <div class="or-divider">
+                    <span>OR</span>
+                </div>
+                
+                <a href="https://josproductions.setmore.com/jos" target="_blank" class="setmore-button">
+                    📅 Schedule Free 15-Minute Call Now
+                </a>
+                
+                <p style="font-size: 0.8rem; color: #666; margin-top: 0.5rem; text-align: center;">
+                    Skip the form - book your free consultation directly
+                </p>
+
                 <div class="success-message" id="successMessage">
                     ✅ Request submitted! You'll receive exclusive Caribbean business intelligence and consultation details within 24 hours.
                 </div>
@@ -383,6 +540,88 @@
                 ✓ Continued partnership opportunities
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">JOS PRODUCTIONS</div>
+                
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="mailto:media@josproductions.com">Contact</a>
+                    <a href="https://josproductions.setmore.com/jos" target="_blank">Book Consultation</a>
+                    <a href="#about">About</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <p>📧 <a href="mailto:media@josproductions.com" style="color: #667eea;">media@josproductions.com</a></p>
+                    <p>🌐 Caribbean Media Strategy & Market Entry Consulting</p>
+                    <p>📅 <a href="https://josproductions.setmore.com/jos" target="_blank" style="color: #667eea;">Schedule Your Free 15-Minute Consultation</a></p>
+                </div>
+
+                <div class="footer-social">
+                    <!-- Add your social media links here when available -->
+                    <a href="mailto:media@josproductions.com" title="Email">📧</a>
+                    <a href="https://josproductions.setmore.com/jos" target="_blank" title="Book Consultation">📅</a>
+                </div>
+
+                <div class="footer-bottom">
+                    <p><strong>© 2025 JOS Productions. All rights reserved.</strong></p>
+                    <p>Specializing in authentic Caribbean storytelling and market entry strategies</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">
+                        <em>Helping brands connect with Caribbean markets through cultural insight and strategic expertise</em>
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
+
+    <!-- Thank You Page Content (Hidden by default) -->
+    <div id="thankYouPage" style="display: none;">
+        <div class="container">
+            <div class="hero">
+                <div class="logo">JOS PRODUCTIONS</div>
+                <h1 class="hero-headline">Thank You!</h1>
+                <p class="hero-subtext">Your consultation request has been received. I'll be in touch within 24 hours with exclusive Caribbean business intelligence and next steps.</p>
+                
+                <div style="margin: 3rem 0; padding: 2rem; background: rgba(255, 255, 255, 0.9); border-radius: 15px; text-align: center;">
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">What happens next?</h3>
+                    <div style="text-align: left; max-width: 400px; margin: 0 auto;">
+                        <p style="margin: 1rem 0;"><strong>✅ Within 24 hours:</strong> You'll receive a personalized email with Caribbean market insights relevant to your challenge</p>
+                        <p style="margin: 1rem 0;"><strong>📅 Schedule when ready:</strong> I'll include a direct link to book your free 15-minute strategy call</p>
+                        <p style="margin: 1rem 0;"><strong>🎯 Get immediate value:</strong> Even if we don't work together, you'll walk away with actionable insights</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <p style="color: #666; font-size: 1.1rem;">In the meantime, feel free to explore:</p>
+                    <div style="margin: 1rem 0;">
+                        <a href="mailto:media@josproductions.com" style="color: #667eea; text-decoration: none; margin: 0 1rem;">📧 Email Me Directly</a>
+                        <a href="https://josproductions.setmore.com/jos" target="_blank" style="color: #ff6b6b; text-decoration: none; margin: 0 1rem;">📅 Book Call Now</a>
+                    </div>
+                </div>
+
+                <!-- Footer for Thank You Page -->
+                <footer class="footer">
+                    <div class="footer-content">
+                        <div class="footer-logo">JOS PRODUCTIONS</div>
+                        <div class="footer-bottom">
+                            <p><strong>© 2025 JOS Productions. All rights reserved.</strong></p>
+                            <p>Caribbean Media Strategy & Market Entry Consulting</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if we're on the thank you page (you can modify this based on your setup)
+        if (window.location.pathname.includes('thank-you') || window.location.search.includes('success')) {
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById('thankYouPage').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
